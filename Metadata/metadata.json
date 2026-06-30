@@ -1,0 +1,26 @@
+[
+  {
+    "FileName": "H\u00E0m B\u0103m.pdf",
+    "EncryptedFileName": "H\u00E0m B\u0103m.pdf.enc",
+    "Hash": "6AD4EAE6827AEC3F4A8DAAF409EB89ABB60EE50A984BC346A07FAE2AB6053934",
+    "FileSize": 887704,
+    "UploadTime": "2026-06-28T23:39:44.1805171+07:00",
+    "Clouds": [
+      "CloudA",
+      "CloudB",
+      "CloudC"
+    ]
+  },
+  {
+    "FileName": "TRR_CH\u01AF\u01A0NG 2_1.pptx",
+    "EncryptedFileName": "TRR_CH\u01AF\u01A0NG 2_1.pptx.enc",
+    "Hash": "277DF8BB53278380190D52990BC604B105708ADC796B0EC37F6FFDC6824894C9",
+    "FileSize": 4184413,
+    "UploadTime": "2026-06-28T23:49:09.1934622+07:00",
+    "Clouds": [
+      "CloudA",
+      "CloudB",
+      "CloudC"
+    ]
+  }
+]

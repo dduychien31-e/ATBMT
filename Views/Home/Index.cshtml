@@ -1,0 +1,106 @@
+﻿@model List<ATBM.Models.FileMetadata>
+
+@{
+    ViewData["Title"] = "ATBM";
+}
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">
+        Multi-Cloud Secure Replication
+    </h2>
+
+    <div class="card shadow p-4">
+
+        <form method="post"
+              enctype="multipart/form-data"
+              asp-action="Upload">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Chọn tài liệu
+                </label>
+
+                <input class="form-control"
+                       type="file"
+                       name="file" />
+
+            </div>
+
+            <button class="btn btn-primary"
+                    type="submit">
+
+                Upload
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <hr />
+
+    <h4>Danh sách tài liệu</h4>
+
+    <table class="table table-bordered table-striped">
+
+        <thead>
+
+            <tr>
+
+                <th>Tên file</th>
+
+                <th>Hash</th>
+
+                <th>Cloud</th>
+
+                <th>Verify</th>
+                <th>Recovery</th>
+                <th>Download</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.FileName</td>
+
+                    <td>@item.Hash</td>
+
+                    <td>@string.Join(", ", item.Clouds)</td>
+                    <td>
+                        <a asp-action="Verify"
+                           asp-route-fileName="@item.FileName"
+                           class="btn btn-warning btn-sm">
+                            Verify
+                        </a>
+                    </td>
+
+                    <td>
+                        <a asp-action="Recovery"
+                           asp-route-fileName="@item.FileName"
+                           class="btn btn-danger btn-sm">
+                            Recovery
+                        </a>
+                    </td>
+
+                    <td>
+                        <a asp-action="Download"
+                           asp-route-fileName="@item.FileName"
+                           class="btn btn-success btn-sm">
+                            Download
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
